@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Julio v2</title>
+</head>
+<body>
+
+<div id="AgrupamentoPorIntervalos">
+    <h1 class="Titulos">Agrupamento por intervalos</h1>
+    <br>
+
+    <div class="divDosAgrupamentos">
+        <h3 class="inputDosAgrupamentos">Nome</h3>
+        <input class="inputDosAgrupamentos" type="text">
+        <br>
+        <h3 class="inputDosAgrupamentos">Ano</h3>
+        <input class="inputDosAgrupamentos" type="Number">
+        <br>
+        <button id="botaoDeAdicionar" onclick="adicionar()">Adicionar</button>
+    </div>
+
+
+    <div class="divDasListas">
+        <div class="divDasDivisoes" id="primeiraDivisao">
+            <ul class="uls">
+            </ul>
+        </div>
+
+        <div class="divDasDivisoes" id="segundaDivisao">
+            <ul class="uls">
+            </ul>
+        </div>
+
+        <div class="divDasDivisoes" id="terceiraDivisao">
+            <ul class="uls">
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<br>
+
+<div id="EstruturaDeDados">
+    <h1 class="Titulos">Estrutura de dados</h1>
+    <br>
+
+    <table class="table" width="400" border="1">
+        <thead>
+            <tr>
+                <th>Coluna 1</th>
+                <th>Coluna 2</th>
+                <th>Coluna 3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+            </tr>
+            <tr>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+            </tr>
+            <tr>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+                <td><input class="inputs" type="Number"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="botaoDeGeracao" onclick="gerarValores()">Gerar valores aleatórios</button>
+    <button id="botaoDeJogarNasBarras" onclick="jogarNasBarras()">Jogar nas barras</button>
+    <button id="botaoDeOrganizacao" onclick="organizar()">Organizar</button>
+
+
+    <h2 class="Titulos">Lista ordenada</h2>
+    <div class="divDasBarras">
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+        <div class="barrasVerdes"></div>
+    </div>
+
+
+</div>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
