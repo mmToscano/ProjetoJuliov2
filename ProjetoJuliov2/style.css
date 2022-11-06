@@ -1,39 +1,30 @@
-button {
-  background-color: rgb(255, 98, 98);
-  border: solid white;
-}
+body{
+  background-color: whitesmoke;
+  padding: 15px;
 
-.Titulos {
-  margin: auto;
-  text-align: center;
 }
+  
+  /* Agrupamentos por intervalos*/
+  
+  #AgrupamentoPorIntervalos {
+    border: solid black 1px;
+      /*os componentes width e margin devem ser retirados ao final do trabalho */
+      width:  70%;
+      margin: auto
+  }
 
-h2 {
-  margin: auto;
-}
+  .Titulos {
+    margin: auto;
+    text-align: center;
+  }
 
-.table {
-  margin: auto;
-  width: 300px;
-}
-
-.divDosAgrupamentos {
+  .divDosAgrupamentos {
     text-align: center;
     left: 3px;
     border: black solid 1px;
     width: 450px;
     margin: auto;
     margin-bottom: 20px;
-  }
-
-  .divDasDivisoes {
-    border: black solid 1px;
-    width: 20%;
-    display: inline-block;
-  }
-
-  .divDasListas {
-    margin-left: 350px;
   }
 
   .inputDosAgrupamentos {
@@ -46,39 +37,44 @@ h2 {
     margin-bottom: 5px;
   }
 
+  /* */
+
+  .divDasListas {
+    margin-left: 350px;
+  }
+
+  .divDasDivisoes {
+    border: black solid 1px;
+    width: 20%;
+    display: inline-block;
+  }
+
+  button {
+    background-color: rgb(255, 98, 98);
+    border: solid white;
+  }
+
+
+/*Estrutura de dados */
+
+  #EstruturaDeDados {
+    border: solid black 1px;
+    /*os componentes width e margin devem ser retirados ao final do trabalho */
+    width:  70%;
+    margin: auto
+  }
+
+  .table {
+    margin: auto;
+    width: 300px;
+  }
+
   td input {
     width: 100px;
     height: 25px;
   }
 
-  .barrasVerdes {
-    height: 20px;
-    width: 20px;
-    background-color: lightgreen;
-    display: inline-block;
-    margin: 8px;
-    border-radius: 5px;
-}
-
-  .divDasBarras {
-    margin: 0 auto;
-    width: 400px;
-  }
-
-  .numerosAbaixoDasBarras{
-    display: inline-block;
-    margin: 8px;
-    margin-top: 1px;
-    height: 20px;
-    width: 20px;
-  }
-   
-  .divsParaEspacar {
-    margin-top: 1px;
-    margin-bottom: 1px;
-    
-  }
-
+  /*usei css para mudar o tamanho dos botões e suas localizações */
   #botaoDeGeracao{
     position: relative;
     left: 820px;
@@ -98,3 +94,47 @@ h2 {
     left: 610px;
     bottom: 140px;
   }
+
+  /*Segunda parte da estrutura de dados, a lista em si*/
+
+
+  .divDasBarras {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .barrasVerdes {
+    height: 20px;
+    width: 20px;
+    background-color: lightgreen;
+    display: inline-block;
+    margin: 8px;
+    border-radius: 5px;
+  }
+
+  .numerosAbaixoDasBarras{
+    display: inline-block;
+    margin: 8px;
+    margin-top: 1px;
+    height: 20px;
+    width: 20px;
+  }
+
+  /*Diferentes gráficos */
+
+  #DiferentesGraficos {
+    position: relative;
+    margin: auto;
+    margin-bottom: 8px;
+    height: 320px;
+    width: 600px;
+  }
+
+  canvas{
+    border: 1px solid gainsboro;
+    background: white;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  }
+  
+
+  
