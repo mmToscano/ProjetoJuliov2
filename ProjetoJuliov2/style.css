@@ -65,6 +65,20 @@ h2 {
     width: 400px;
   }
 
+  .numerosAbaixoDasBarras{
+    display: inline-block;
+    margin: 8px;
+    margin-top: 1px;
+    height: 20px;
+    width: 20px;
+  }
+   
+  .divsParaEspacar {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    
+  }
+
   #botaoDeGeracao{
     position: relative;
     left: 820px;
