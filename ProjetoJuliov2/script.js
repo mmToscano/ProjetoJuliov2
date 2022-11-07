@@ -96,23 +96,80 @@ function organizar(){
 
 //O código abaixo trata-se da manipulação do gráfico do Chart.js
 
-colorPatters = ['red', 'purple', 'yellow'];
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
-var chart = new Chart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'bar',
 
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
             label: 'My First dataset',
-            backgroundColor: colorPatters,
-            borderColor: colorPatters,
-            borderWidth: 5,
-            data: [0, 10, 5, 2, 20, 30, 45]
+            backgroundColor: [
+                'rgba(255, 0, 0, 0.5)',
+                'rgba(255,165,0, 0.5)',
+                'rgba(255,255,0, 0.5)',
+                'rgba(0,255,0, 0.5)',
+                'rgba(0,0,255, 0.5)',
+                'rgba(221,160,221, 0.5)',
+                'rgba(255, 192, 203, 0.5)'
+            ],
+            borderColor: 'black',
+            borderWidth: 1,
+            data: []
         }]
     },
 
     options: {}
 });
+
+function gerarValores(){
+    for(count = 0; count < myChart.data.labels.length; count++){
+        myChart.data.datasets[0].data[count] = Math.random(50);
+    }
+    myChart.update();
+}
+
+gerarValores();
+
+function mudarGrafico(e){
+
+    auxData = myChart.data;
+    
+    switch(e.target.id){
+        case "linha":
+            myChart.destroy();
+            myChart = new Chart(ctx, {
+                type: 'line',
+                data: auxData
+            });
+            gerarValores();
+        break;
+        case "pizza":
+            myChart.destroy();
+            myChart = new Chart (ctx, {
+                type: 'pie',
+                data: auxData
+            });
+            gerarValores();
+        break;
+        case "barra":
+            myChart.destroy();
+            myChart = new Chart (ctx, {
+                type: 'bar',
+                data: auxData
+            });
+            gerarValores();
+        break;
+        case "polar":
+            myChart.destroy();
+            myChart = new Chart (ctx, {
+                type: 'polarArea',
+                data: auxData
+            });
+            gerarValores();
+        break;
+
+    }
+}
