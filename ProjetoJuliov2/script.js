@@ -93,7 +93,7 @@ function organizar(){
 
 }
 
-
+//'January', 'February', 'March', 'April', 'May', 'June', 'July'
 //O código abaixo trata-se da manipulação do gráfico do Chart.js
 
 
@@ -103,7 +103,7 @@ var myChart = new Chart(ctx, {
     type: 'bar',
 
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: [" ", " ", " ", " ", " ", " ", " " ],
         datasets: [{
             label: 'My First dataset',
             backgroundColor: [
@@ -127,6 +127,39 @@ var myChart = new Chart(ctx, {
 function gerarValores(){
     for(count = 0; count < myChart.data.labels.length; count++){
         myChart.data.datasets[0].data[count] = Math.random(50);
+    }
+    myChart.update();
+}
+
+function gerarValor(){
+    let posicao = myChart.data.datasets[0].data.length;
+    myChart.data.labels[posicao] = " ";
+    myChart.data.datasets[0].data[posicao] = Math.random(50);
+    myChart.update();
+}
+
+function apagarValor(){
+    myChart.data.datasets[0].data.pop();
+    myChart.update();
+}
+
+let auxDataset = {
+    label: 'My First dataset',
+    backgroundColor: [
+        'rgba(255, 255, 0, 0.5)'
+    ],
+    borderColor: 'black',
+    borderWidth: 1,
+    data: []
+}
+
+function adicionarConjunto(){
+    let posicaoDoDataset = myChart.data.datasets.length;
+
+    myChart.data.datasets.push(auxDataset);
+
+    for(count = 0; count < 7; count++){
+        myChart.data.datasets[posicaoDoDataset].data[count] = Math.random(50);
     }
     myChart.update();
 }

@@ -110,10 +110,15 @@
 <div id="DiferentesGraficos">
     <h1 class="Titulos">Diferentes Gráficos</h1>
     <canvas id="myChart"></canvas>
-    <button id="linha" onclick="mudarGrafico(event)">Gráfico de linha</button>
-    <button id="pizza" onclick="mudarGrafico(event)">Gráfico de pizza</button>
-    <button id="barra" onclick="mudarGrafico(event)">Gráfico de barra</button>
-    <button id="polar" onclick="mudarGrafico(event)">Gráfico polar</button>
+    <button id="linha" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de linha</button>
+    <button id="pizza" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de pizza</button>
+    <button id="barra" class= 'botoesDoGrafico'  onclick="mudarGrafico(event)">Gráfico de barra</button>
+    <button id="polar" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico polar</button>
+    <br>
+    <button class="botoesDoGraficoEmBaixo" onclick="gerarValores()">Randomizar valores</button>
+    <button class="botoesDoGraficoEmBaixo" onclick="gerarValor()">Gerar valor</button>
+    <button class="botoesDoGraficoEmBaixo" onclick="apagarValor()">Apagar valor</button>
+    <button class="botoesDoGraficoEmBaixo" onclick="adicionarConjunto()">Adicionar conjunto de valores</button>
 </div>
 
 

@@ -50,8 +50,17 @@ body{
   }
 
   button {
-    background-color: rgb(255, 98, 98);
-    border: solid white;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: whitesmoke;
+    border: 0.5px solid rgb(122, 122, 122);
+    color: rgba(72, 187, 225, 1);
+    height: 35px;
+  }
+
+  button:hover {
+    background-color: rgb(191, 221, 231);
+    color: black;
   }
 
 
@@ -135,6 +144,24 @@ body{
     border: 1px solid gainsboro;
     background: white;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .botoesDoGrafico {
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(255, 0, 0);
+  }
+
+  .botoesDoGrafico:hover {
+    color: brown;
+  }
+
+  .botoesDoGraficoEmBaixo {
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
   }
   
 
