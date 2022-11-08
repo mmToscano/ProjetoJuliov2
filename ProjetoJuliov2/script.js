@@ -125,9 +125,12 @@ var myChart = new Chart(ctx, {
 });
 
 function gerarValores(){
-    for(count = 0; count < myChart.data.labels.length; count++){
-        myChart.data.datasets[0].data[count] = Math.random(50);
+    for(countDoDataset = 0; countDoDataset < myChart.data.datasets.length; countDoDataset ++){
+        for(count = 0; count < myChart.data.labels.length; count++){
+            myChart.data.datasets[countDoDataset].data[count] = Math.random(50);
+        }
     }
+    
     myChart.update();
 }
 
@@ -144,24 +147,31 @@ function apagarValor(){
 }
 
 let auxDataset = {
-    label: 'My First dataset',
-    backgroundColor: [
-        'rgba(255, 255, 0, 0.5)'
-    ],
+    label: 'dataset',
+    backgroundColor: 'rgba(255, 255, 0, 0.5)',
     borderColor: 'black',
     borderWidth: 1,
     data: []
 }
 
 function adicionarConjunto(){
-    let posicaoDoDataset = myChart.data.datasets.length;
 
-    myChart.data.datasets.push(auxDataset);
+    //Para dar certo, não é possível usar o auxData set. É preciso criar um dataSet inteiramente novo toda vez que rodar o método.
+    let aux = {
+        label: 'dataset',
+        backgroundColor: 'rgba(255, 255, 0, 0.5)',
+        borderColor: 'black',
+        borderWidth: 1,
+        data: []
+    }
 
     for(count = 0; count < 7; count++){
-        myChart.data.datasets[posicaoDoDataset].data[count] = Math.random(50);
+        aux.data[count] = Math.random(50);
     }
+
+    myChart.data.datasets.push(aux);
     myChart.update();
+    
 }
 
 gerarValores();
