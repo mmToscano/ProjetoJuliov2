@@ -76,7 +76,7 @@
             </tr>
         </tbody>
     </table>
-    <button id="botaoDeGeracao" onclick="gerarValores()">Gerar valores aleatórios</button>
+    <button id="botaoDeGeracao" onclick="gerarValoresNaLista()">Gerar valores aleatórios</button>
     <button id="botaoDeJogarNasBarras" onclick="jogarNasBarras()">Jogar nas barras</button>
     <button id="botaoDeOrganizacao" onclick="organizar()">Organizar</button>
 
@@ -119,6 +119,28 @@
     <button class="botoesDoGraficoEmBaixo" onclick="gerarValor()">Gerar valor</button>
     <button class="botoesDoGraficoEmBaixo" onclick="apagarValor()">Apagar valor</button>
     <button class="botoesDoGraficoEmBaixo" onclick="adicionarConjunto()">Adicionar conjunto de valores</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="DiferentesGraficos">
+    <canvas id="myScatterChart"></canvas>
+    
+</div>
+
+<div id="DiferentesGraficos">
+    <button id="primeira" onclick="rodarFormula(event)">y=x²</button>
+    <button id="segunda" onclick="rodarFormula(event)">y=x³</button>
+    <button id="terceira" onclick="rodarFormula(event)">y = sen x</button>
+    <button id="quarta" onclick="rodarFormula(event)">y = valor locao</button>
 </div>
 
 

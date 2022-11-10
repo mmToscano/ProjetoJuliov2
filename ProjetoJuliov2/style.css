@@ -165,4 +165,18 @@ body{
   }
   
 
+  /* */
+
+  #myScatterChart {
+    position: relative;
+    margin: auto;
+    margin-bottom: 8px;
+    height: 320px;
+    width: 600px;
+  }
+
+  .DiferentesGraficos button {
+    margin: auto;
+  }
+
   

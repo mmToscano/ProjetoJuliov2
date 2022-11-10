@@ -38,7 +38,7 @@ let inputs = document.querySelectorAll('.inputs');
 let barras = document.querySelectorAll('.barrasVerdes');
 let numerosAbaixoDasBarras = document.querySelectorAll('.numerosAbaixoDasBarras');
 
-function gerarValores(){
+function gerarValoresNaLista(){
     for(count = 0; count < inputs.length; count++){
         inputs[count].value = Math.floor((Math.random() * 250) + 30);
     }
@@ -93,7 +93,6 @@ function organizar(){
 
 }
 
-//'January', 'February', 'March', 'April', 'May', 'June', 'July'
 //O código abaixo trata-se da manipulação do gráfico do Chart.js
 
 
@@ -214,5 +213,90 @@ function mudarGrafico(e){
             gerarValores();
         break;
 
+    }
+}
+
+
+//Código que cuida da parte de plotar as funções no gráfico
+
+
+const ctx2 = document.getElementById('myScatterChart').getContext('2d');
+
+const myScatterChart = new Chart(ctx2, {
+    type: 'scatter',
+
+    data: {
+        datasets: [{
+            label: 'Diferentes gráficos',
+            data: [],
+            backgroundColor: 'white',
+            borderColor: 'rgb(64, 31, 211)',
+            borderWidth: 1,
+            pointRadius: 0.1,
+            pointHoverRadius: 7,
+            showLine: true
+
+        }]
+    },
+
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            x: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+
+
+function formula(valorDoY, quantidade){
+
+    
+    myScatterChart.data.datasets[0].data = null;
+    myScatterChart.update();
+
+
+    object = {x: null, y: null};
+
+    for(count = 0; count < quantidade; count++){
+        myScatterChart.data.datasets[0].data[count] = object;
+    }
+
+    valorDoX = -1 * ((quantidade -1)/2);
+    for(count = 0; count < quantidade; count ++, valorDoX+= 1){
+        myScatterChart.data.datasets[0].data[count] = {x: valorDoX, y: eval(valorDoY)};
+    }
+    
+    myScatterChart.update();
+    
+}
+
+function rodarFormula(e){
+
+    switch(e.target.id){
+        case "primeira":
+            valorDoY = "valorDoX * valorDoX"
+            formula(valorDoY, 81);
+        break;
+
+        case "segunda":
+            valorDoY = "valorDoX * valorDoX * valorDoX";
+            formula(valorDoY, 81);
+        break;
+
+        case "terceira":
+            valorDoY = "Math.sin(valorDoX)";
+            formula(valorDoY, 81);
+        break;
+
+        case "quarta":
+            valorDoY = "(Math.exp((valorDoX * valorDoX) * -1)) * Math.sin(Math.PI * Math.pow(valorDoX, 3))";
+            formula(valorDoY, 21);
+        break;
     }
 }
