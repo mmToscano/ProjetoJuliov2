@@ -70,6 +70,12 @@ img {
     color: black;
   }
 
+  #fluxograma {
+    margin-left: 20px;
+    width: 700px;
+    margin-top: 40px;
+  }
+
 
 /*Estrutura de dados */
 
@@ -231,3 +237,14 @@ img {
     cursor: pointer;
   }
   
+
+  .imagensDosModais {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 2px solid forestgreen;
+    background-color: forestgreen;
+    color: white;
+    display: inline-block;
+    padding: 3px;
+    }
