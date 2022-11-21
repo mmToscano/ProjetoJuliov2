@@ -321,12 +321,31 @@ function rodarQuartaFormula(){
     myScatterChart.update();
 }
 
+//código que cuida da árvore
+
+const todos = document.querySelectorAll(".todo");
+const togglers = document.querySelectorAll(".toggler");
+
+todos.forEach((todo) => {
+  todo.addEventListener("click", () => {
+    todo.classList.toggle("active");
+  });
+});
+
+togglers.forEach((toggler) => {
+  toggler.addEventListener("click", () => {
+    toggler.classList.toggle("active");
+    toggler.nextElementSibling.classList.toggle("active");
+  });
+});
+
 //código que cuida dos modais
 
 var modalDosAgrupamentos = document.querySelector("#Modal-dos-agrupamentos");
 var modalDaEstruturaDeDados = document.querySelector("#Modal-da-estrutura-de-dados");
 var modalDosDiferentesGraficos = document.querySelector("#Modal-dos-diferentes-graficos");
 var modalParaPlotarGraficos = document.querySelector("#Modal-de-plotar-grafico");
+var modalDaArvoreBinaria = document.querySelector("#Modal-da-arvore-binaria");
 
 var body = document;
 
@@ -344,6 +363,8 @@ function abrirModal(e) {
         case "quartoModal":
             modalParaPlotarGraficos.style.display = "block";
             break;
+        case "quintoModal":
+            modalDaArvoreBinaria.style.display = "block";
     }
 }
 
@@ -357,8 +378,10 @@ function fecharModal() {
 
     }else if(modalDosDiferentesGraficos.style.display == "block"){
         modalDosDiferentesGraficos.style.display = "none";
-    }else{
+    }else if(modalParaPlotarGraficos.style.display == "block"){
         modalParaPlotarGraficos.style.display = "none";
+    }else{
+        modalDaArvoreBinaria.style.display = "none";
     }
 }
 
