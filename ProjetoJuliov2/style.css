@@ -3,14 +3,18 @@ body{
   padding: 15px;
 
 }
+
+img {
+  width: 200px;
+}
   
   /* Agrupamentos por intervalos*/
   
   #AgrupamentoPorIntervalos {
-    border: solid black 1px;
-      /*os componentes width e margin devem ser retirados ao final do trabalho */
-      width:  70%;
-      margin: auto
+    background-color: white;
+    width:  70%;
+    margin: auto;
+    border-radius: 20px;
   }
 
   .Titulos {
@@ -37,16 +41,19 @@ body{
     margin-bottom: 5px;
   }
 
-  /* */
+  /* css das listas */
 
   .divDasListas {
-    margin-left: 350px;
+    margin: auto;
   }
 
   .divDasDivisoes {
     border: black solid 1px;
     width: 20%;
     display: inline-block;
+    margin: auto;
+    position: relative;
+    left: 135px
   }
 
   button {
@@ -67,10 +74,10 @@ body{
 /*Estrutura de dados */
 
   #EstruturaDeDados {
-    border: solid black 1px;
-    /*os componentes width e margin devem ser retirados ao final do trabalho */
+    background-color: white;
     width:  70%;
-    margin: auto
+    margin: auto;
+    border-radius: 20px;
   }
 
   .table {
@@ -133,17 +140,35 @@ body{
   /*Diferentes gráficos */
 
   #DiferentesGraficos {
-    position: relative;
     margin: auto;
     margin-bottom: 8px;
-    height: 320px;
-    width: 600px;
+    height: 650px;
+    width: 650px;
   }
 
   canvas{
+    margin-left: 100px;
     border: 1px solid gainsboro;
     background: white;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .botoesDoGraficoEmBaixo {
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
+
+  /* grafico para plotar */
+
+  #graficoDinamico {
+    margin: auto;
+    margin-bottom: 8px;
+    height: 650px;
+    width: 650px;
   }
 
   .botoesDoGrafico {
@@ -157,26 +182,48 @@ body{
     color: brown;
   }
 
-  .botoesDoGraficoEmBaixo {
-    margin-top: 12px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 15px;
+  #botoesDosGraficos {
+    margin: auto;
+  }
+
+
+  /* Parte do modal: */
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
-
-  /* */
-
-  #myScatterChart {
-    position: relative;
-    margin: auto;
-    margin-bottom: 8px;
-    height: 320px;
-    width: 600px;
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    margin-left: 10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
   }
 
-  .DiferentesGraficos button {
-    margin: auto;
+   /* The Close Button */
+   .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
   }
-
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
   

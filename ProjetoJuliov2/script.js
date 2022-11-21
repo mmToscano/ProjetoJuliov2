@@ -290,13 +290,83 @@ function rodarFormula(e){
         break;
 
         case "terceira":
-            valorDoY = "Math.sin(valorDoX)";
-            formula(valorDoY, 81);
+            rodarQuartaFormula();
         break;
 
         case "quarta":
             valorDoY = "(Math.exp((valorDoX * valorDoX) * -1)) * Math.sin(Math.PI * Math.pow(valorDoX, 3))";
-            formula(valorDoY, 21);
+            formula(valorDoY, 41);
         break;
     }
 }
+
+function rodarQuartaFormula(){
+    myScatterChart.data.datasets[0].data = null;
+    myScatterChart.update();
+
+    quantidade = 161;
+
+    object = {x: null, y: null};
+
+    for(count = 0; count < quantidade; count++){
+        myScatterChart.data.datasets[0].data[count] = object;
+    }
+
+    let valorDoX = -10;
+    for(count = 0; count < quantidade; count ++, valorDoX+= 0.25){
+        myScatterChart.data.datasets[0].data[count] = {x: valorDoX, y: Math.sin(valorDoX)};
+    }
+    
+    myScatterChart.update();
+}
+
+//código que cuida dos modais
+
+var modalDosAgrupamentos = document.querySelector("#Modal-dos-agrupamentos");
+var modalDaEstruturaDeDados = document.querySelector("#Modal-da-estrutura-de-dados");
+var modalDosDiferentesGraficos = document.querySelector("#Modal-dos-diferentes-graficos");
+var modalParaPlotarGraficos = document.querySelector("#Modal-de-plotar-grafico");
+
+var body = document;
+
+function abrirModal(e) {
+    switch(e.target.id){
+        case "primeiroModal":
+            modalDosAgrupamentos.style.display = "block";
+            break;
+        case "segundoModal":
+            modalDaEstruturaDeDados.style.display = "block";
+            break;
+        case "terceiroModal":
+            modalDosDiferentesGraficos.style.display = "block";
+            break;
+        case "quartoModal":
+            modalParaPlotarGraficos.style.display = "block";
+            break;
+    }
+}
+
+
+function fecharModal() {
+    if(modalDosAgrupamentos.style.display == "block"){
+        modalDosAgrupamentos.style.display = "none";
+
+    }else if(modalDaEstruturaDeDados.style.display == "block"){
+        modalDaEstruturaDeDados.style.display = "none";
+
+    }else if(modalDosDiferentesGraficos.style.display == "block"){
+        modalDosDiferentesGraficos.style.display = "none";
+    }else{
+        modalParaPlotarGraficos.style.display = "none";
+    }
+}
+
+body.addEventListener("click", (event) => {
+    const isSpan = event.target.nodeName === 'SPAN';
+
+    if(isSpan){
+        fecharModal();
+    }
+}); 
+
+

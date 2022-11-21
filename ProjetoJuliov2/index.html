@@ -9,139 +9,187 @@
 </head>
 <body>
 
-<div id="AgrupamentoPorIntervalos">
-    <h1 class="Titulos">Agrupamento por intervalos</h1>
-    <br>
+<img id="primeiroModal" class="imagensDosModais" onclick="abrirModal(event)" src="C:\Users\MMora\Pictures\agrupamento por intervalos.png">
 
-    <div class="divDosAgrupamentos">
-        <h3 class="inputDosAgrupamentos">Nome</h3>
-        <input class="inputDosAgrupamentos" type="text">
-        <br>
-        <h3 class="inputDosAgrupamentos">Ano</h3>
-        <input class="inputDosAgrupamentos" type="Number">
-        <br>
-        <button id="botaoDeAdicionar" onclick="adicionar()">Adicionar</button>
+<!-- The Modal -->
+<div id="Modal-dos-agrupamentos" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span> <!-- este span com o etimes é o x que fecha o modal-->
+        <div id="info">
+            <div id="AgrupamentoPorIntervalos">
+                <h1 class="Titulos">Agrupamento por intervalos</h1>
+                <br>
+            
+                <div class="divDosAgrupamentos">
+                    <h3 class="inputDosAgrupamentos">Nome</h3>
+                    <input class="inputDosAgrupamentos" type="text">
+                    <br>
+                    <h3 class="inputDosAgrupamentos">Ano</h3>
+                    <input class="inputDosAgrupamentos" type="Number">
+                    <br>
+                    <button id="botaoDeAdicionar" onclick="adicionar()">Adicionar</button>
+                </div>
+            
+            
+                <div class="divDasListas">
+                    <div class="divDasDivisoes" id="primeiraDivisao">
+                        <ul class="uls">
+                        </ul>
+                    </div>
+            
+                    <div class="divDasDivisoes" id="segundaDivisao">
+                        <ul class="uls">
+                        </ul>
+                    </div>
+            
+                    <div class="divDasDivisoes" id="terceiraDivisao">
+                        <ul class="uls">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+</div>
 
-    <div class="divDasListas">
-        <div class="divDasDivisoes" id="primeiraDivisao">
-            <ul class="uls">
-            </ul>
-        </div>
 
-        <div class="divDasDivisoes" id="segundaDivisao">
-            <ul class="uls">
-            </ul>
-        </div>
+<br>
 
-        <div class="divDasDivisoes" id="terceiraDivisao">
-            <ul class="uls">
-            </ul>
+
+<img id="segundoModal" class="imagensDosModais" onclick="abrirModal(event)" src="C:\Users\MMora\Pictures\estrutura de dados.png">
+
+
+<!-- The Modal -->
+<div id="Modal-da-estrutura-de-dados" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span> <!-- este span com o etimes é o x que fecha o modal-->
+        <div id="info">
+            <div id="EstruturaDeDados">
+                <h1 class="Titulos">Estrutura de dados</h1>
+                <br>
+            
+                <table class="table" width="400" border="1">
+                    <thead>
+                        <tr>
+                            <th>Coluna 1</th>
+                            <th>Coluna 2</th>
+                            <th>Coluna 3</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                        </tr>
+                        <tr>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                            <td><input class="inputs" type="Number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="botaoDeGeracao" onclick="gerarValoresNaLista()">Gerar valores aleatórios</button>
+                <button id="botaoDeJogarNasBarras" onclick="jogarNasBarras()">Jogar nas barras</button>
+                <button id="botaoDeOrganizacao" onclick="organizar()">Organizar</button>
+            
+            
+                <h2 class="Titulos">Lista ordenada</h2>
+                <div class="divDasBarras">
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="barrasVerdes"></div>
+                    <div class="divsParaEspacar"></div>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                    <h5 class="numerosAbaixoDasBarras"></h5>
+                </div>
+            
+            
+            </div>
         </div>
     </div>
+
 </div>
 
+<img id="terceiroModal" class="imagensDosModais" onclick="abrirModal(event)" src="C:\Users\MMora\Pictures\diferentes graficos.png">
 
-<br>
+<!-- The Modal -->
+<div id="Modal-dos-diferentes-graficos" class="modal">
 
-<div id="EstruturaDeDados">
-    <h1 class="Titulos">Estrutura de dados</h1>
-    <br>
-
-    <table class="table" width="400" border="1">
-        <thead>
-            <tr>
-                <th>Coluna 1</th>
-                <th>Coluna 2</th>
-                <th>Coluna 3</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-            </tr>
-            <tr>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-            </tr>
-            <tr>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-                <td><input class="inputs" type="Number"></td>
-            </tr>
-        </tbody>
-    </table>
-    <button id="botaoDeGeracao" onclick="gerarValoresNaLista()">Gerar valores aleatórios</button>
-    <button id="botaoDeJogarNasBarras" onclick="jogarNasBarras()">Jogar nas barras</button>
-    <button id="botaoDeOrganizacao" onclick="organizar()">Organizar</button>
-
-
-    <h2 class="Titulos">Lista ordenada</h2>
-    <div class="divDasBarras">
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="barrasVerdes"></div>
-        <div class="divsParaEspacar"></div>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
-        <h5 class="numerosAbaixoDasBarras"></h5>
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span> <!-- este span com o etimes é o x que fecha o modal-->
+        <div id="info">
+            <div id="DiferentesGraficos">
+                <h1 class="Titulos">Diferentes Gráficos</h1>
+                <canvas id="myChart"></canvas>
+                <button id="linha" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de linha</button>
+                <button id="pizza" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de pizza</button>
+                <button id="barra" class= 'botoesDoGrafico'  onclick="mudarGrafico(event)">Gráfico de barra</button>
+                <button id="polar" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico polar</button>
+                <br>
+                <button class="botoesDoGraficoEmBaixo" onclick="gerarValores()">Randomizar valores</button>
+                <button class="botoesDoGraficoEmBaixo" onclick="gerarValor()">Gerar valor</button>
+                <button class="botoesDoGraficoEmBaixo" onclick="apagarValor()">Apagar valor</button>
+                <button class="botoesDoGraficoEmBaixo" onclick="adicionarConjunto()">Adicionar conjunto de valores</button>
+            </div>
+        </div>
     </div>
 
+</div>
+
+
+
+<img id="quartoModal" class="imagensDosModais" onclick="abrirModal(event)" src="C:\Users\MMora\Pictures\plotar graficos.png">
+
+<!-- The Modal -->
+<div id="Modal-de-plotar-grafico" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" onclick="fecharModal()">&times;</span> <!-- este span com o etimes é o x que fecha o modal-->
+        <div id="info">
+            <div id="graficoDinamico">
+                               
+                <canvas id="myScatterChart"></canvas>
+            
+                <div id="botoesDosGraficos">
+                    <button id="primeira" onclick="rodarFormula(event)">y=x²</button>
+                    <button id="segunda" onclick="rodarFormula(event)">y=x³</button>
+                    <button id="terceira" onclick="rodarFormula(event)">y = sen x</button>
+                    <button id="quarta" onclick="rodarFormula(event)">y = valor locao</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>
 
-<div id="DiferentesGraficos">
-    <h1 class="Titulos">Diferentes Gráficos</h1>
-    <canvas id="myChart"></canvas>
-    <button id="linha" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de linha</button>
-    <button id="pizza" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico de pizza</button>
-    <button id="barra" class= 'botoesDoGrafico'  onclick="mudarGrafico(event)">Gráfico de barra</button>
-    <button id="polar" class= 'botoesDoGrafico' onclick="mudarGrafico(event)">Gráfico polar</button>
-    <br>
-    <button class="botoesDoGraficoEmBaixo" onclick="gerarValores()">Randomizar valores</button>
-    <button class="botoesDoGraficoEmBaixo" onclick="gerarValor()">Gerar valor</button>
-    <button class="botoesDoGraficoEmBaixo" onclick="apagarValor()">Apagar valor</button>
-    <button class="botoesDoGraficoEmBaixo" onclick="adicionarConjunto()">Adicionar conjunto de valores</button>
-</div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="DiferentesGraficos">
-    <canvas id="myScatterChart"></canvas>
-    
-</div>
-
-<div id="DiferentesGraficos">
-    <button id="primeira" onclick="rodarFormula(event)">y=x²</button>
-    <button id="segunda" onclick="rodarFormula(event)">y=x³</button>
-    <button id="terceira" onclick="rodarFormula(event)">y = sen x</button>
-    <button id="quarta" onclick="rodarFormula(event)">y = valor locao</button>
-</div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
