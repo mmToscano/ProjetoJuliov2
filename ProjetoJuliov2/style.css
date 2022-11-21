@@ -93,22 +93,22 @@ img {
   /*usei css para mudar o tamanho dos botões e suas localizações */
   #botaoDeGeracao{
     position: relative;
-    left: 820px;
-    bottom: 45px;
+    left: 550px;
+    bottom: 120px;
     width: 100px;
   }
 
   #botaoDeJogarNasBarras {
     position: relative;
-    left: 715px;
-    bottom: 100px;
+    left: 445px;
+    bottom: 80px;
     width: 100px;
   }
 
   #botaoDeOrganizacao {
     position: relative;
-    left: 610px;
-    bottom: 140px;
+    left: 340px;
+    bottom: 30px;
 
   }
 
@@ -162,15 +162,6 @@ img {
     margin-bottom: 15px;
   }
 
-  /* grafico para plotar */
-
-  #graficoDinamico {
-    margin: auto;
-    margin-bottom: 8px;
-    height: 650px;
-    width: 650px;
-  }
-
   .botoesDoGrafico {
     margin-top: 20px;
     margin-left: 5px;
@@ -182,8 +173,21 @@ img {
     color: brown;
   }
 
-  #botoesDosGraficos {
+  /* grafico para plotar */
+
+  #graficoDinamico {
     margin: auto;
+    margin-bottom: 8px;
+    height: 650px;
+    width: 650px;
+  }
+
+  #botoesDoGraficoPlotado {
+    margin: auto;
+  }
+
+  #primeira {
+    margin-left: 220px;
   }
 
 

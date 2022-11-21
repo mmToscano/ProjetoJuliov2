@@ -294,8 +294,9 @@ function rodarFormula(e){
         break;
 
         case "quarta":
-            valorDoY = "(Math.exp((valorDoX * valorDoX) * -1)) * Math.sin(Math.PI * Math.pow(valorDoX, 3))";
-            formula(valorDoY, 41);
+            valorDoY = "1 / valorDoX";
+            formula(valorDoY, 161);
+            
         break;
     }
 }
